@@ -7,8 +7,7 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev --skip-generate",
     "db:deploy": "prisma migrate deploy",
-    "preinstall": "pnpm add prisma && prisma generate",
-    "postinstall": "pnpm remove prisma"
+    "preinstall": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
