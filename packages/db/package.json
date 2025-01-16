@@ -9,7 +9,6 @@
     "db:migrate": "prisma migrate dev --skip-generate",
     "db:deploy": "prisma migrate deploy",
     "db:build": "prisma migrate deploy && tsc",
-    "build": "tsc",
     "clean": "rm -rf dist",
     "postinstall": "pnpm run db:generate"
   },
