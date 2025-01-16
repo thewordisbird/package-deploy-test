@@ -102,13 +102,13 @@ importers:
       '@prisma/client':
         specifier: ^6.2.1
         version: 6.2.1(prisma@6.2.1)
+      prisma:
+        specifier: ^6.2.1
+        version: 6.2.1
     devDependencies:
       '@types/node':
         specifier: ^20
         version: 20.17.13
-      prisma:
-        specifier: ^6.2.1
-        version: 6.2.1
 
 packages:
 
