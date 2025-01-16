@@ -10,7 +10,8 @@
     "db:deploy": "prisma migrate deploy",
     "db:build": "prisma migrate deploy && tsc",
     "build": "tsc",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "postinstall": "pnpm run db:build"
   },
   "exports": {
     ".": {
