@@ -1,8 +1,6 @@
 "use server";
 
-import { PrismaClient } from "@repo/db";
-
-const prisma = new PrismaClient();
+import { prisma } from "@repo/db";
 
 export async function submitAddUser(formData: FormData) {
   await prisma.user.create({
