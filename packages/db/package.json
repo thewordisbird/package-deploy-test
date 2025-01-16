@@ -1,18 +1,24 @@
 {
-  "name": "db",
+  "name": "@repo/db",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --skip-generate",
+    "db:deploy": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^20",
     "prisma": "^6.2.1"
   },
   "dependencies": {
     "@prisma/client": "^6.2.1"
+  },
+  "exports": {
+    ".": "./src/index.ts"
   }
 }
