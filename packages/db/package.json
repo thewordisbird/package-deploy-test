@@ -11,7 +11,7 @@
     "db:build": "prisma migrate deploy && tsc",
     "build": "tsc",
     "clean": "rm -rf dist",
-    "postinstall": "pnpm run db:build"
+    "postinstall": "pnpm run db:generate"
   },
   "exports": {
     ".": {
