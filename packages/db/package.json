@@ -14,10 +14,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20"
   },
   "dependencies": {
-    "prisma": "^6.2.1"
+    "prisma": "^6.2.1",
     "@prisma/client": "^6.2.1"
   },
   "exports": {
