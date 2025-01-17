@@ -3,8 +3,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build", "^db:deploy", "^db:generate"],
-      "outputs": [".next/**", "!.next/cache/**"],
-      "env": ["DATABASE_URL", "DATABASE_URL_UNPOOLED"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
