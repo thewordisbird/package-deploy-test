@@ -9,7 +9,7 @@ export default function AddUserForm() {
     const email = formData.get("email") as string;
 
     try {
-      const response = await fetch("/api/add-user", {
+      const response = await fetch("/api/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
