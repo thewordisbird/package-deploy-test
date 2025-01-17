@@ -6,10 +6,7 @@
   "scripts": {
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev --skip-generate",
-    "db:deploy": "prisma migrate deploy",
-    "postinstall": "npx prisma generate",
-    "postinstall": "export PRISMA_QUERY_ENGINE_BINARY=./generated/client/libquery_engine-darwin-arm64.dylib.node",
-    "vercel-build": "prisma generate && prisma migrate deploy"
+    "db:deploy": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
