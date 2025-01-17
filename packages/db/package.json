@@ -7,7 +7,7 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev --skip-generate",
     "db:deploy": "prisma migrate deploy",
-    "preinstall": "echo 'db url: $DATABASE_URL\ndb url unpooled: $DATABASE_URL_UNPOOLED'"
+    "preinstall": "echo db url: $DATABASE_URL\ndb url unpooled: $DATABASE_URL_UNPOOLED"
   },
   "keywords": [],
   "author": "",
