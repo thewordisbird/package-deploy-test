@@ -6,8 +6,7 @@
   "scripts": {
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev --skip-generate",
-    "db:deploy": "prisma migrate deploy",
-    "postinstall": "export PRISMA_QUERY_ENGINE_BINARY=node_modules/@repo/db/generated/client/libquery_engine-rhel-openssl-3.0.x.so.node"
+    "db:deploy": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
