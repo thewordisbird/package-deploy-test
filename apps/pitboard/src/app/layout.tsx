@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="p-4 bg-gray-100">
+          <Link
+            href="/users/add"
+            className="mr-4 hover:underline text-gray-800"
+          >
+            Add User
+          </Link>
+          <Link href="/users/view" className="hover:underline text-gray-800">
+            View User
+          </Link>
+        </nav>
         {children}
       </body>
     </html>

@@ -1,6 +1,31 @@
 "use client";
 
+import { useState } from "react";
+
+function Banner({
+  message,
+  type,
+}: {
+  message: string;
+  type: "success" | "error";
+}) {
+  const bgColor =
+    type === "success"
+      ? "bg-green-100 border-green-500 text-green-700"
+      : "bg-red-100 border-red-500 text-red-700";
+
+  return (
+    <div className={`p-4 mb-4 border-l-4 ${bgColor}`} role="alert">
+      {message}
+    </div>
+  );
+}
+
 export default function AddUserForm() {
+  const [banner, setBanner] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -23,13 +48,22 @@ export default function AddUserForm() {
 
       // Clear the form
       (event.target as HTMLFormElement).reset();
+      setBanner({ message: "User added successfully", type: "success" });
+
+      // Clear success message after 3 seconds
+      setTimeout(() => setBanner(null), 3000);
     } catch (error) {
       console.error("Error adding user:", error);
+      setBanner({ message: "Failed to add user", type: "error" });
+
+      // Clear error message after 3 seconds
+      setTimeout(() => setBanner(null), 3000);
     }
   }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        {banner && <Banner message={banner.message} type={banner.type} />}
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <input
             type="text"
