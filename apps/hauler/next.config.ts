@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
+const { PrismaPlugin } = require("@prisma/nextjs-monorepo-workaround-plugin");
 
 const nextConfig: NextConfig = {
-  webpack(config) {
-    // Add a rule to handle .node files
-    config.module.rules.push({
-      test: /\.node$/,
-      use: "node-loader",
-    });
+  /* config options here */
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.plugins = [...config.plugins, new PrismaPlugin()];
+    }
 
     return config;
   },

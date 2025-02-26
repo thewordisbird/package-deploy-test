@@ -10,6 +10,9 @@ importers:
 
   apps/hauler:
     dependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^6.4.1
+        version: 6.4.1
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
@@ -56,6 +59,9 @@ importers:
 
   apps/pitboard:
     dependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^6.4.1
+        version: 6.4.1
       '@repo/db':
         specifier: workspace:*
         version: link:../../packages/db
@@ -553,6 +559,9 @@ packages:
 
   '@prisma/get-platform@6.4.1':
     resolution: {integrity: sha512-gXqZaDI5scDkBF8oza7fOD3Q3QMD0e0rBynlzDDZdTWbWmzjuW58PRZtj+jkvKje2+ZigCWkH8SsWZAsH6q1Yw==}
+
+  '@prisma/nextjs-monorepo-workaround-plugin@6.4.1':
+    resolution: {integrity: sha512-c8bIsLBw4DUBwzU5B/ra65dwiDTXlZObKUXizOomNIS+yRImxAx6vPRVYHwirSQegHSUqrpAQN5/7tFLszCWBw==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -2512,6 +2521,8 @@ snapshots:
   '@prisma/get-platform@6.4.1':
     dependencies:
       '@prisma/debug': 6.4.1
+
+  '@prisma/nextjs-monorepo-workaround-plugin@6.4.1': {}
 
   '@rtsao/scc@1.1.0': {}
 

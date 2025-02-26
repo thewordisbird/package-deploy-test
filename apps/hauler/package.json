@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/nextjs-monorepo-workaround-plugin": "^6.4.1",
     "@repo/db": "workspace:*",
     "next": "15.1.4",
     "react": "^19.0.0",
